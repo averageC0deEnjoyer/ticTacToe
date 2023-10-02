@@ -161,7 +161,6 @@ const gameController = (() => {
             if(player1Turn === 1 && gameBoard.getBoard(event.target.getAttribute('data-value')) === "" && winnerBool === 0) {
                 gameBoard.setBoard(event.target.getAttribute('data-value'), player1.getMark());
                 event.target.textContent = gameBoard.getBoard(event.target.getAttribute('data-value'));
-                console.log(gameBoard.currentBoardState())
                 player1Turn = 0;
                 player2Turn = 1;
                 winChecker(gameBoard.currentBoardState());
@@ -169,7 +168,6 @@ const gameController = (() => {
         } else if (player2Turn === 1 && gameBoard.getBoard(event.target.getAttribute('data-value')) === "" && winnerBool === 0){
                 gameBoard.setBoard(event.target.getAttribute('data-value'), player2.getMark());
                 event.target.textContent = gameBoard.getBoard(event.target.getAttribute('data-value'));
-                console.log(gameBoard.currentBoardState())
                 player1Turn = 1;
                 player2Turn = 0;
                 winChecker(gameBoard.currentBoardState());
